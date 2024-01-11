@@ -223,33 +223,7 @@ namespace NodeClass
 
         #endregion
 
-        #region Excercises
 
-        public static Node<char> Reverse(Node<char> text)
-        {
-
-            throw new NotImplementedException();
-           
-           
-        }
-
-        public static Node<char> ReverseWithDummy(Node<char>text)
-        {
-
-
-            throw new NotImplementedException();
-        }
-
-
-
-
-        public static bool IsEqual<X>(Node<X> ls1, Node<X>ls2)
-        {
-           throw new NotImplementedException("To do");               
-
-        }
-
-        #endregion
 
         #region כפילויות
 
