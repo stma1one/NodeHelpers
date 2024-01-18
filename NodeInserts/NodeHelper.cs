@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NodeInserts.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -141,7 +142,7 @@ namespace NodeClass
             Node<T> dummy = new Node<T>(default(T), list);
 
             Node<T> next = dummy.GetNext();
-            Node<T> current = dummy;
+            Node<T> current = dummy; 
             while (next != null && !next.GetValue().Equals(val))
             {
                 current = current.GetNext();
@@ -398,7 +399,32 @@ namespace NodeClass
             }
             return result;
         }
+
         #endregion
+
+        public static bool IsExistsShabatReceiver(Node<ShabatRecievers> list, int day, int month, int year)
+        {
+            while (list!=null)
+            {
+                if(list.GetValue().GetYear()==year && list.GetValue().GetMonth() == year && list.GetValue().GetDay() == year)
+                    return true;
+                list = list.GetNext();
+            }
+            return false;
+        }
+
+        public static Node<ShabatRecievers> DeleteShabatReciever(Node<ShabatRecievers> list, string shabatReciever)
+        {
+            Node <ShabatRecievers> head = list;
+            while (list != null && (list.GetValue().GetParent2()==shabatReciever || list.GetValue().GetParent1() == shabatReciever)) 
+            {
+                list = list.GetNext();
+            }
+            if (list!=null)
+                return Delete<ShabatRecievers>(list, list.GetValue());
+            return head;
+
+        }
 
     }
 }
