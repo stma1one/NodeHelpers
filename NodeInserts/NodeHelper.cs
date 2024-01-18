@@ -97,12 +97,6 @@ namespace NodeClass
 
         }
         #endregion
-        #region Excersise
-        public static void AddAfterValue<T>(Node<T> lst,T after,T value)
-        {
-            throw new NotImplementedException();
-        }
-        #endregion
 
         #region Create Methods
         public static Node<double> CreateDoubleList()
@@ -223,6 +217,9 @@ namespace NodeClass
 
         #endregion
 
+
+
+
         #region Excercises
 
         public static Node<T> Reverse<T>(Node<T> lst)
@@ -292,6 +289,7 @@ namespace NodeClass
         }
 
         #endregion
+
 
         #region כפילויות
 
